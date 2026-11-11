@@ -1,0 +1,345 @@
+{
+ "visitas": 35,
+ "medicoes_max": 52500,
+ "cenarios": {
+  "ortolani|0.005|0.1": {
+   "positivos_med": 127.0,
+   "positivos_p5": 110.0,
+   "positivos_p95": 145.0,
+   "pre_por_positivo_med": 4.0,
+   "com_medida_14a21d_med": 127.0,
+   "com_medida_14a21d_p5": 110.0,
+   "com_linha_de_base_med": 126.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1332.0
+  },
+  "ortolani|0.005|0.2": {
+   "positivos_med": 254.0,
+   "positivos_p5": 233.0,
+   "positivos_p95": 278.05,
+   "pre_por_positivo_med": 4.0,
+   "com_medida_14a21d_med": 253.0,
+   "com_medida_14a21d_p5": 232.0,
+   "com_linha_de_base_med": 251.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1332.0
+  },
+  "ortolani|0.005|0.4": {
+   "positivos_med": 507.0,
+   "positivos_p5": 473.95,
+   "positivos_p95": 535.0,
+   "pre_por_positivo_med": 4.0,
+   "com_medida_14a21d_med": 506.0,
+   "com_medida_14a21d_p5": 473.0,
+   "com_linha_de_base_med": 500.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1331.0
+  },
+  "ortolani|0.005|0.7": {
+   "positivos_med": 887.5,
+   "positivos_p5": 858.95,
+   "positivos_p95": 920.0,
+   "pre_por_positivo_med": 4.0,
+   "com_medida_14a21d_med": 885.5,
+   "com_medida_14a21d_p5": 857.0,
+   "com_linha_de_base_med": 877.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1333.5
+  },
+  "ortolani|0.01|0.1": {
+   "positivos_med": 116.0,
+   "positivos_p5": 100.95,
+   "positivos_p95": 133.0,
+   "pre_por_positivo_med": 4.0,
+   "com_medida_14a21d_med": 116.0,
+   "com_medida_14a21d_p5": 100.95,
+   "com_linha_de_base_med": 115.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1183.0
+  },
+  "ortolani|0.01|0.2": {
+   "positivos_med": 232.5,
+   "positivos_p5": 211.95,
+   "positivos_p95": 254.05,
+   "pre_por_positivo_med": 4.0,
+   "com_medida_14a21d_med": 232.0,
+   "com_medida_14a21d_p5": 211.95,
+   "com_linha_de_base_med": 230.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1183.0
+  },
+  "ortolani|0.01|0.4": {
+   "positivos_med": 466.0,
+   "positivos_p5": 438.95,
+   "positivos_p95": 495.1,
+   "pre_por_positivo_med": 4.0,
+   "com_medida_14a21d_med": 465.0,
+   "com_medida_14a21d_p5": 438.0,
+   "com_linha_de_base_med": 461.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1183.0
+  },
+  "ortolani|0.01|0.7": {
+   "positivos_med": 816.0,
+   "positivos_p5": 785.9,
+   "positivos_p95": 845.05,
+   "pre_por_positivo_med": 4.0,
+   "com_medida_14a21d_med": 814.5,
+   "com_medida_14a21d_p5": 783.9,
+   "com_linha_de_base_med": 807.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1183.0
+  },
+  "ortolani|0.02|0.1": {
+   "positivos_med": 99.0,
+   "positivos_p5": 83.0,
+   "positivos_p95": 114.0,
+   "pre_por_positivo_med": 5.0,
+   "com_medida_14a21d_med": 99.0,
+   "com_medida_14a21d_p5": 82.0,
+   "com_linha_de_base_med": 98.0,
+   "prob_96_em_14a21d": 0.66,
+   "folhas_vivas_fim_med": 932.0
+  },
+  "ortolani|0.02|0.2": {
+   "positivos_med": 195.0,
+   "positivos_p5": 174.95,
+   "positivos_p95": 220.0,
+   "pre_por_positivo_med": 5.0,
+   "com_medida_14a21d_med": 194.0,
+   "com_medida_14a21d_p5": 173.95,
+   "com_linha_de_base_med": 193.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 934.0
+  },
+  "ortolani|0.02|0.4": {
+   "positivos_med": 394.0,
+   "positivos_p5": 366.95,
+   "positivos_p95": 421.0,
+   "pre_por_positivo_med": 5.0,
+   "com_medida_14a21d_med": 393.0,
+   "com_medida_14a21d_p5": 366.9,
+   "com_linha_de_base_med": 388.5,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 932.5
+  },
+  "ortolani|0.02|0.7": {
+   "positivos_med": 689.0,
+   "positivos_p5": 656.95,
+   "positivos_p95": 718.05,
+   "pre_por_positivo_med": 5.0,
+   "com_medida_14a21d_med": 688.0,
+   "com_medida_14a21d_p5": 655.0,
+   "com_linha_de_base_med": 680.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 934.0
+  },
+  "moraes|0.005|0.1": {
+   "positivos_med": 128.0,
+   "positivos_p5": 108.9,
+   "positivos_p95": 144.0,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 128.0,
+   "com_medida_14a21d_p5": 108.9,
+   "com_linha_de_base_med": 126.0,
+   "prob_96_em_14a21d": 0.9933333333333333,
+   "folhas_vivas_fim_med": 1332.0
+  },
+  "moraes|0.005|0.2": {
+   "positivos_med": 254.0,
+   "positivos_p5": 227.9,
+   "positivos_p95": 275.0,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 253.0,
+   "com_medida_14a21d_p5": 226.95,
+   "com_linha_de_base_med": 249.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1331.0
+  },
+  "moraes|0.005|0.4": {
+   "positivos_med": 504.0,
+   "positivos_p5": 473.95,
+   "positivos_p95": 536.0,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 503.0,
+   "com_medida_14a21d_p5": 473.9,
+   "com_linha_de_base_med": 496.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1332.0
+  },
+  "moraes|0.005|0.7": {
+   "positivos_med": 888.0,
+   "positivos_p5": 855.0,
+   "positivos_p95": 919.05,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 886.0,
+   "com_medida_14a21d_p5": 853.0,
+   "com_linha_de_base_med": 871.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1333.0
+  },
+  "moraes|0.01|0.1": {
+   "positivos_med": 115.0,
+   "positivos_p5": 98.0,
+   "positivos_p95": 133.0,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 115.0,
+   "com_medida_14a21d_p5": 98.0,
+   "com_linha_de_base_med": 113.0,
+   "prob_96_em_14a21d": 0.98,
+   "folhas_vivas_fim_med": 1181.0
+  },
+  "moraes|0.01|0.2": {
+   "positivos_med": 233.0,
+   "positivos_p5": 210.0,
+   "positivos_p95": 255.0,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 233.0,
+   "com_medida_14a21d_p5": 209.95,
+   "com_linha_de_base_med": 228.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1184.0
+  },
+  "moraes|0.01|0.4": {
+   "positivos_med": 466.0,
+   "positivos_p5": 440.0,
+   "positivos_p95": 496.0,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 465.0,
+   "com_medida_14a21d_p5": 439.0,
+   "com_linha_de_base_med": 457.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1183.0
+  },
+  "moraes|0.01|0.7": {
+   "positivos_med": 817.0,
+   "positivos_p5": 783.95,
+   "positivos_p95": 850.0,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 815.0,
+   "com_medida_14a21d_p5": 782.0,
+   "com_linha_de_base_med": 801.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 1183.0
+  },
+  "moraes|0.02|0.1": {
+   "positivos_med": 97.0,
+   "positivos_p5": 82.0,
+   "positivos_p95": 114.0,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 97.0,
+   "com_medida_14a21d_p5": 82.0,
+   "com_linha_de_base_med": 95.0,
+   "prob_96_em_14a21d": 0.5733333333333334,
+   "folhas_vivas_fim_med": 932.0
+  },
+  "moraes|0.02|0.2": {
+   "positivos_med": 196.0,
+   "positivos_p5": 176.0,
+   "positivos_p95": 219.05,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 196.0,
+   "com_medida_14a21d_p5": 176.0,
+   "com_linha_de_base_med": 191.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 933.0
+  },
+  "moraes|0.02|0.4": {
+   "positivos_med": 393.0,
+   "positivos_p5": 367.0,
+   "positivos_p95": 422.0,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 392.0,
+   "com_medida_14a21d_p5": 366.0,
+   "com_linha_de_base_med": 385.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 933.0
+  },
+  "moraes|0.02|0.7": {
+   "positivos_med": 690.0,
+   "positivos_p5": 655.95,
+   "positivos_p95": 718.05,
+   "pre_por_positivo_med": 6.0,
+   "com_medida_14a21d_med": 688.5,
+   "com_medida_14a21d_p5": 653.0,
+   "com_linha_de_base_med": 674.0,
+   "prob_96_em_14a21d": 1.0,
+   "folhas_vivas_fim_med": 934.0
+  }
+ },
+ "referencia_20pct": {
+  "positivos": 232,
+  "pre_mediana": 4.0,
+  "pre_p10": 4.0,
+  "pre_p90": 7.0,
+  "medicoes_pre_total": 1154
+ },
+ "incubacao": {
+  "12": {
+   "ortolani": 27.6,
+   "moraes": 36.9
+  },
+  "1": {
+   "ortolani": 26.8,
+   "moraes": 35.3
+  },
+  "2": {
+   "ortolani": 26.8,
+   "moraes": 35.3
+  },
+  "3": {
+   "ortolani": 28.4,
+   "moraes": 37.8
+  },
+  "4": {
+   "ortolani": 30.7,
+   "moraes": 41.9
+  },
+  "5": {
+   "ortolani": 35.2,
+   "moraes": 49.4
+  },
+  "6": {
+   "ortolani": 36.8,
+   "moraes": 51.9
+  }
+ },
+ "comparacao_calendarios": {
+  "A_atual|ortolani": {
+   "visitas": 35,
+   "medicoes": 52500,
+   "positivos_med": 232.0,
+   "pre_mediana": 4.0,
+   "pre_p10": 4.0,
+   "pre_p90": 8.0,
+   "frac_pre_ge6": 0.302121989311249
+  },
+  "A_atual|moraes": {
+   "visitas": 35,
+   "medicoes": 52500,
+   "positivos_med": 234.0,
+   "pre_mediana": 6.0,
+   "pre_p10": 5.0,
+   "pre_p90": 10.0,
+   "frac_pre_ge6": 0.6827002890917938
+  },
+  "B_ajustado|ortolani": {
+   "visitas": 40,
+   "medicoes": 60000,
+   "positivos_med": 234.0,
+   "pre_mediana": 8.0,
+   "pre_p10": 6.0,
+   "pre_p90": 9.0,
+   "frac_pre_ge6": 0.9306549570870519
+  },
+  "B_ajustado|moraes": {
+   "visitas": 40,
+   "medicoes": 60000,
+   "positivos_med": 233.0,
+   "pre_mediana": 10.0,
+   "pre_p10": 8.0,
+   "pre_p90": 12.0,
+   "frac_pre_ge6": 0.9683031254459826
+  }
+ }
+}
