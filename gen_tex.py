@@ -50,7 +50,7 @@ T = r"""\documentclass[11pt,a4paper]{article}
 {\LARGE\bfseries\color{verde} SPECULA}\\[4pt]
 {\large Prova de conceito por simulação:\\ detectabilidade óptica e suficiência do desenho de coleta}\\[8pt]
 Anuar José Mincache\\
-Maringá, 11 de novembro de 2026 \textbar{} versão 1.0
+Maringá, 11 de novembro de 2026 \textbar{} versão 0.1 (beta)\\[2pt]{\small Código, dados e figuras: \url{https://github.com/anuarmincache/specula-rt01}}
 \end{center}
 
 \begin{center}
@@ -224,6 +224,15 @@ As duas simulações estão em Python (\texttt{sim\_optica.py} e \texttt{sim\_co
 \bibitem{sklearn} PEDREGOSA, F. et al. Scikit-learn: machine learning in Python. \textit{Journal of Machine Learning Research}, v. 12, p. 2825-2830, 2011.
 \bibitem{soares2022} SOARES, A. S.; VIEIRA, B. S.; BEZERRA, T. A.; MARTINS, G. D.; SIQUIEROLI, A. C. S. Early detection of coffee leaf rust caused by \textit{Hemileia vastatrix} using multispectral images. \textit{Agronomy}, v. 12, n. 12, 2911, 2022. doi:10.3390/agronomy12122911.
 \end{thebibliography}
+
+\vspace{1em}
+\begin{center}
+\fcolorbox{verde}{white}{\parbox{0.9\textwidth}{\centering\small
+\textbf{\color{verde}Acesso aberto para a banca avaliadora}\\[4pt]
+Todo o código, os dados de entrada, os resultados numéricos e as figuras deste relatório estão disponíveis em\\[4pt]
+{\large\url{https://github.com/anuarmincache/specula-rt01}}\\[4pt]
+Versão 0.1 (beta). Qualquer número do relatório pode ser reproduzido com os scripts do repositório.}}
+\end{center}
 \end{document}
 """
 open(os.path.join(H, "relatorio_RT01.tex"), "w").write(T)
