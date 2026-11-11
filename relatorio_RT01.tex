@@ -19,7 +19,7 @@
 {\LARGE\bfseries\color{verde} SPECULA}\\[4pt]
 {\large Prova de conceito por simulação:\\ detectabilidade óptica e suficiência do desenho de coleta}\\[8pt]
 Anuar José Mincache\\
-Maringá, 11 de novembro de 2026 \textbar{} versão 0.1 (beta)\\[2pt]{\small Código, dados e figuras: \url{https://github.com/anuarmincache/specula-rt01}}
+Maringá, novembro de 2026 \textbar{} versão 0.1 (beta)\\[2pt]{\small Código, dados e figuras: \url{https://github.com/anuarmincache/specula-rt01}}
 \end{center}
 
 \begin{center}
@@ -29,7 +29,7 @@ Maringá, 11 de novembro de 2026 \textbar{} versão 0.1 (beta)\\[2pt]{\small Có
 \section*{Resumo}
 \textbf{Simulação 1.} Folhas de café foram simuladas com o modelo PROSPECT-D e medidas por um modelo do sensor AS7265x (18 bandas de 20 nm). Quando a folha infectada é comparada com \emph{outras} folhas sadias, a variação natural entre folhas esconde o sinal: com alteração de 10\% nos pigmentos e na matéria seca, a área sob a curva ROC (AUC) fica em 0,62. Quando a folha é comparada com \emph{ela mesma} em visitas anteriores (autorreferência), a mesma alteração atinge AUC de 0,99, e uma alteração de 5\% já atinge 0,90. Com autorreferência, as 18 bandas do AS7265x têm desempenho equivalente a um espectrômetro de referência e superior a uma câmera de três bandas largas.
 
-\textbf{Simulação 2.} Um modelo Monte Carlo da coorte de 1.500 folhas etiquetadas em Cambira (PR), com incubação calculada pelo clima local e progresso da doença ancorado em dados de campo publicados, mostra que a coorte gera cerca de 232 folhas positivas com incidência de 20\% e mais de 96 positivas (o necessário para estimar a sensibilidade com margem de $\pm$10 pontos) sempre que a incidência final passa de 10\% e a perda de folhas fica em até 1\% por semana. A simulação também mostrou uma falha no calendário original: como as lesões aparecem sobretudo entre março e maio, concentrar as visitas em dezembro a fevereiro dá apenas 4 medições antes do sintoma por folha (mediana). Um calendário ajustado à epidemia, com 5 visitas a mais, dobra esse número para 8.
+\textbf{Simulação 2.} Um modelo Monte Carlo da coorte de 1.500 folhas etiquetadas em Cambira (PR), com incubação calculada pelo clima local e progresso da doença ancorado em dados de campo publicados, mostra que a coorte gera cerca de 232 folhas positivas com incidência de 20\% e mais de 96 positivas (o necessário para estimar a sensibilidade com margem de $\pm$10 pontos) sempre que a incidência final passa de 10\% e a perda de folhas fica em até 1\% por semana. A simulação também mostrou uma falha no calendário original: como as lesões aparecem sobretudo entre março e maio, concentrar as visitas em dezembro a fevereiro dá apenas 4 medições antes do sintoma por folha (mediana). Um calendário ajustado à epidemia, com 4 visitas a mais, dobra esse número para 8.
 
 \section{Objetivo e perguntas}
 O SPECULA propõe medir a refletância de folhas de café no visível e no infravermelho próximo para antecipar a ferrugem (\emph{Hemileia vastatrix}). Antes de comprar hardware, duas perguntas precisam de resposta quantitativa:
@@ -57,7 +57,7 @@ Pigmentos marrons & 0 & & & folhas verdes, como em \cite{soares2022} \\\bottomru
 \noindent Os valores marcados como hipótese serão substituídos por medições na fase de bancada do projeto. Os resultados dependem mais das \emph{variações} relativas do que dos valores absolutos, e a análise foi repetida para dois níveis de ruído.
 
 \subsection{Cenários de alteração precoce}
-Soares et al. \cite{soares2022} inocularam 160 mudas de `Mundo Novo' com \emph{H.~vastatrix} (raça II) e compararam com 160 controles. Aos 15 dias após a inoculação, ainda sem sintomas, encontraram diferenças significativas em carotenoides e matéria seca (maiores nas inoculadas) e em espessura de água (menor), sem diferença na clorofila. Com imagens de três bandas e SVM, separaram os grupos com 80\% de acerto (kappa 0,6). O artigo não publica a magnitude das alterações, então a simulação varia o \emph{tamanho do efeito} $s$ de 0 a 20\%:
+Soares et al. \cite{soares2022} inocularam 160 mudas de `Mundo Novo' com \emph{H.~vastatrix} e compararam com 160 controles. Aos 15 dias após a inoculação, ainda sem sintomas, encontraram diferenças significativas em carotenoides e matéria seca (maiores nas inoculadas) e em espessura de água (menor), sem diferença na clorofila. Com imagens de três bandas e SVM, separaram os grupos com 80\% de acerto (kappa 0,6). O artigo não publica a magnitude das alterações, então a simulação varia o \emph{tamanho do efeito} $s$ de 0 a 20\%:
 \begin{itemize}
 \item \textbf{Cenário A} (direções de Soares et al. aos 15 dias): $C_{ar}\times(1+s)$, $C_m\times(1+s)$, $C_w\times(1-s)$, clorofila inalterada.
 \item \textbf{Cenário B} (fase posterior): perda de clorofila, $C_{ab}\times(1-s)$. A queda de eficiência fotoquímica antes do sintoma visual também foi descrita por imagem de fluorescência \cite{honorato2015}.
@@ -103,12 +103,12 @@ Efeito & entre folhas & autorreferência & entre folhas & autorreferência \\\mi
 \begin{enumerate}
 \item \textbf{A variação natural entre folhas é o obstáculo principal, não o ruído do sensor.} Comparando folhas diferentes, um efeito de 10\% dá AUC de apenas 0,62. Isso explica por que diagnósticos de imagem única tendem a funcionar só depois do sintoma.
 \item \textbf{A autorreferência resolve o problema.} Medindo a mesma folha ao longo do tempo, o efeito de 5\% chega a AUC 0,90 (cenário A) e 0,93 (cenário B), e o de 10\% passa de 0,94 mesmo com ruído de 2\%. É a justificativa quantitativa da coorte de folhas etiquetadas e do nó Sentinel, que mede a mesma folha todos os dias.
-\item \textbf{O AS7265x é suficiente.} Com efeito de 5\%, o AS7265x atinge 0,87, contra 0,84 do espectrômetro e 0,69 da câmera de três bandas. O espectrômetro não leva vantagem aqui porque muitas variáveis com poucas amostras penalizam o classificador linear; com mais dados ele pode superar o sensor. A câmera de três bandas perde a região de 510 a 535 nm, onde está a assinatura do cenário A.
+\item \textbf{O AS7265x é suficiente.} Com efeito de 5\%, o AS7265x atinge 0,87, contra 0,84 do espectrômetro e 0,69 da câmera de três bandas. O espectrômetro não leva vantagem aqui porque muitas variáveis com poucas amostras penalizam o classificador linear; com mais dados ele pode superar o sensor. A câmera de três bandas perde a região de 510 a 535 nm, onde está a assinatura do cenário A. Os três sensores usam o mesmo classificador linear, então a diferença vem só das bandas, não do algoritmo. Os 80\% de Soares et al. vêm de outro classificador (SVM) e de outro desenho experimental e não são diretamente comparáveis a estes valores.
 \end{enumerate}
 
 \section{Simulação 2: suficiência da coorte de campo}
 \subsection{Desenho simulado}
-A simulação reproduz o cronograma do projeto: 1.500 folhas do 3º e 4º par de ramos do terço médio, etiquetadas em 01/12/2027, com 2 visitas por semana até 29/02/2028 e 1 visita por semana até 15/05/2028, totalizando 35 medições por folha (incluindo a da etiquetagem). Cada realização sorteia, para cada folha, se ela adoece, quando a lesão aparece, quando ocorreu a infecção e se a folha é perdida. Foram feitas 300 realizações por cenário.
+A simulação reproduz o cronograma original do projeto: 1.500 folhas do 3º e 4º par de ramos do terço médio, etiquetadas em 01/12/2027, com 2 visitas por semana até 29/02/2028 e 1 visita por semana até 15/05/2028. São 34 visitas mais a medição da etiquetagem, ou 35 medições por folha. Por ter menos visitas na fase de maior progresso da doença, esse calendário é o caso conservador e é o usado nos cenários abaixo. Cada realização sorteia, para cada folha, se ela adoece, quando a lesão aparece, quando ocorreu a infecção e se a folha é perdida. Foram feitas 300 realizações por cenário.
 
 \subsection{Período de incubação pelo clima local}
 O período de incubação (da infecção ao sintoma) foi calculado mês a mês por duas equações revisadas por Alfonsi et al. \cite{alfonsi2019}: Ortolani et al. (1971), $Y = 63{,}47 - 1{,}526\,\bar{T}$, e Moraes et al. (1976), $Y = 93{,}27 - 0{,}99\,T_{\max} - 1{,}51\,T_{\min}$, com as temperaturas médias mensais de Apucarana, município vizinho à área experimental \cite{climatempo}. Foi aplicada variação aleatória de $\pm$15\% em torno do valor do mês. A Tabela~\ref{tab:ip} mostra que os valores ficam dentro da faixa de 28 a 65 dias relatada para o Brasil \cite{alfonsi2019}; para Maringá e Londrina, a literatura citada por esses autores indica 30 e 31 dias.
@@ -157,12 +157,12 @@ final & (Ortolani) & Ortolani & Moraes & perda 1\%/sem. & perda 2\%/sem. \\\midr
 \caption{Cenário de referência (incidência de 20\%): medições antes do sintoma por folha e distribuição da antecedência de todas as medições pré-sintomáticas.}\end{figure}
 
 \begin{figure}[H]\centering\includegraphics[width=0.72\textwidth]{fig/fig8_calendarios.pdf}
-\caption{Calendário original (visitas intensivas de dezembro a fevereiro) contra calendário ajustado à epidemia (semanal em dezembro e janeiro, duas por semana de fevereiro a 15 de maio).}\label{fig:cal}\end{figure}
+\caption{Calendário original (visitas intensivas de dezembro a fevereiro) contra calendário ajustado à epidemia, adotado no cronograma final (semanal do fim da etiquetagem a janeiro, duas por semana de 01/02 a 15/05/2028). As contagens excluem a medição da etiquetagem.}\label{fig:cal}\end{figure}
 
 \subsection{O que a simulação 2 mostra}
 \begin{enumerate}
 \item \textbf{A coorte de 1.500 folhas é suficiente se a incidência final passar de 10\%.} Com 20\%, a coorte gera 232 positivas (mediana). Com 10\% e perda de 1\% por semana, gera 116 e cumpre o critério em 100\% das realizações; com perda de 2\% por semana, a chance cai para 66\%. Por isso o projeto prevê uma faixa com manejo reduzido de fungicida e etiquetagem com sobra.
-\item \textbf{O calendário original estava mal alinhado com a epidemia.} A maioria das lesões aparece entre março e maio, quando o calendário original tem só uma visita por semana. O resultado é uma mediana de 4 medições antes do sintoma por folha (6 com a incubação mais longa). Com o calendário ajustado, de 40 visitas, a mediana sobe para 8 (10), e a fração de folhas com pelo menos 6 medições pré-sintomáticas passa de 30\% para 93\%. O custo é de 5 visitas a mais.
+\item \textbf{O calendário original estava mal alinhado com a epidemia.} A maioria das lesões aparece entre março e maio, quando o calendário original tem só uma visita por semana. O resultado é uma mediana de 4 medições antes do sintoma por folha (6 com a incubação mais longa). Com o calendário ajustado, de 38 visitas mais a etiquetagem, a mediana sobe para 8 (10), e a fração de folhas com pelo menos 6 medições pré-sintomáticas passa de 30\% para 93\%. O custo é de 4 visitas a mais.
 \item \textbf{O Marco 3 precisa ser reposicionado.} Com incidência final de 20\%, espera-se cerca de 43 folhas com lesão até 29/02/2028 e 146 até 31/03/2028. O critério original (60 folhas até o fim de fevereiro) falharia mesmo num cenário bom. O critério coerente com a simulação é manter as 60 folhas, mas verificá-las em 31/03/2028: com incidência final de 10\% e perda de 1\% por semana, esperam-se cerca de 60 a 65 folhas com lesão nessa data, e 10\% é justamente o mínimo que dá poder estatístico.
 \end{enumerate}
 
@@ -170,8 +170,8 @@ final & (Ortolani) & Ortolani & Moraes & perda 1\%/sem. & perda 2\%/sem. \\\midr
 \begin{itemize}
 \item Manter a medição repetida da mesma folha (coorte e Sentinel) como base do método, porque é ela que torna a alteração precoce detectável.
 \item Manter o AS7265x como sensor do Scan; não usar câmeras de três bandas como fonte espectral.
-\item Ajustar o calendário de campo: semanal em dezembro e janeiro, duas visitas por semana de 01/02 a 15/05/2028 (40 visitas no total).
-\item Reposicionar o Marco 3 para 31/03/2028, mantendo o critério de pelo menos 60 folhas com lesão.
+\item Ajustar o calendário de campo: semanal do fim da etiquetagem até 31/01/2028 e duas visitas por semana de 01/02 a 15/05/2028 (38 visitas mais a etiquetagem, cerca de 58,5 mil medições). Já adotado no cronograma do projeto.
+\item Reposicionar o Marco 3 para 31/03/2028, mantendo o critério de pelo menos 60 folhas com lesão. Já adotado no cronograma do projeto.
 \item Garantir incidência mínima de 10\% com faixa de manejo reduzido e manter a perda de folhas em até 1\% por semana, com etiquetagem de sobra.
 \end{itemize}
 
@@ -185,7 +185,7 @@ final & (Ortolani) & Ortolani & Moraes & perda 1\%/sem. & perda 2\%/sem. \\\midr
 \end{itemize}
 
 \section{Reprodutibilidade}
-As duas simulações estão em Python (\texttt{sim\_optica.py} e \texttt{sim\_coorte.py}), com sementes fixas (20261111 e 20261112), e usam \texttt{prosail}, \texttt{numpy}, \texttt{scikit-learn} e \texttt{matplotlib}. Os resultados numéricos completos estão em \texttt{resultados\_optica.json} e \texttt{resultados\_coorte.json}, e todos os números deste relatório são lidos desses arquivos. Repositório público: \url{https://github.com/anuarmincache/specula-rt01}.
+\sloppy As duas simulações estão em Python (\texttt{sim\_optica.py} e \texttt{sim\_coorte.py}), com sementes fixas (20261111 e 20261112), e usam \texttt{prosail}, \texttt{numpy}, \texttt{scikit-learn} e \texttt{matplotlib}, com as versões travadas em \texttt{requirements.txt}. Os resultados numéricos completos estão em \texttt{resultados\_optica.json} e \texttt{resultados\_coorte.json}, e todos os números deste relatório são lidos desses arquivos. Repositório público: \url{https://github.com/anuarmincache/specula-rt01}.
 
 \begin{thebibliography}{99}\small
 \bibitem{alfonsi2019} ALFONSI, W. M. V.; COLTRI, P. P.; ZULLO JÚNIOR, J.; PATRÍCIO, F. R. A.; ALFONSI, E. L. Período de incubação da ferrugem do cafeeiro. \textit{Summa Phytopathologica}, v. 45, n. 2, p. 134-140, 2019. doi:10.1590/0100-5405/187216.

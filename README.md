@@ -61,7 +61,7 @@ Folhas de café simuladas com o **PROSPECT-D** (Féret et al., 2017) e medidas p
 
 <p align="center"><img src="fig/fig4_sensores.png" width="560"></p>
 
-Com autorreferência, o AS7265x tem desempenho equivalente ao de um espectrômetro de referência e superior ao de uma câmera de três bandas largas, porque a assinatura do cenário A está entre 510 e 535 nm.
+Com autorreferência, o AS7265x tem desempenho equivalente ao de um espectrômetro de referência e superior ao de uma câmera de três bandas largas, porque a assinatura do cenário A está entre 510 e 535 nm. Os três sensores usam o mesmo classificador linear, então a diferença vem só das bandas. Os 80% de acerto de Soares et al. (2022) vêm de outro classificador (SVM) e de outro desenho, e não são diretamente comparáveis a estes valores.
 
 ---
 
@@ -83,7 +83,7 @@ Monte Carlo (300 realizações por cenário) da coorte de **1.500 folhas** do 3�
 
 <p align="center"><img src="fig/fig7_antecedencia.png" width="760"></p>
 
-**A simulação encontrou uma falha no próprio plano:** as lesões aparecem sobretudo entre março e maio, mas o calendário original concentrava as visitas em dezembro a fevereiro. Um calendário ajustado à epidemia, com só 5 visitas a mais, dobra as medições antes do sintoma (mediana de 4 para 8).
+**A simulação encontrou uma falha no próprio plano:** as lesões aparecem sobretudo entre março e maio, mas o calendário original concentrava as visitas em dezembro a fevereiro. Um calendário ajustado à epidemia, com só 4 visitas a mais, dobra as medições antes do sintoma (mediana de 4 para 8). Os cenários da tabela acima usam o calendário original (34 visitas mais a etiquetagem), que é o caso conservador.
 
 <p align="center"><img src="fig/fig8_calendarios.png" width="600"></p>
 
@@ -91,8 +91,8 @@ Monte Carlo (300 realizações por cenário) da coorte de **1.500 folhas** do 3�
 
 - Medir a mesma folha repetidas vezes (coorte e Sentinel) é a base do método.
 - O AS7265x é suficiente para o Scan; câmeras de três bandas não servem como fonte espectral.
-- O calendário de campo passa a ser semanal em dezembro e janeiro e de duas visitas por semana de fevereiro a 15 de maio (40 visitas).
-- O Marco 3 do projeto passa para 31/03/2028, com pelo menos 60 folhas com lesão.
+- O calendário de campo passa a ser semanal do fim da etiquetagem até janeiro e de duas visitas por semana de 01/02 a 15/05/2028 (38 visitas mais a etiquetagem, cerca de 58,5 mil medições). **Já adotado no cronograma do projeto.**
+- O Marco 3 do projeto passa para 31/03/2028, com pelo menos 60 folhas com lesão. **Já adotado no cronograma do projeto.**
 - A incidência mínima de 10% é garantida com uma faixa de manejo reduzido de fungicida, e a perda de folhas deve ficar em até 1% por semana.
 
 ## Limitações
@@ -113,7 +113,7 @@ specula-rt01/
 ├── relatorio_RT01.tex            fonte LaTeX do relatório
 ├── gen_tex.py                    escreve o .tex lendo os números dos arquivos JSON
 ├── exportar_dados.py             exporta entradas e resultados para CSV (pasta dados/)
-├── requirements.txt              dependências Python
+├── requirements.txt              dependências Python com versões travadas
 ├── resultados_optica.json        resultados completos da simulação 1
 ├── resultados_coorte.json        resultados completos da simulação 2
 ├── sim/
