@@ -1,8 +1,11 @@
 """
 SPECULA - Simulacao 2: Monte Carlo da coorte de folhas etiquetadas em Cambira (PR).
 
-Calendario do cronograma do site (v2): etiquetagem em 01/12/2027; fase intensiva com 2 visitas
-por semana ate 29/02/2028; acompanhamento com 1 visita por semana ate 15/05/2028.
+Calendario A (original, versao anterior do cronograma): etiquetagem com medicao inicial em 01/12/2027;
+2 visitas por semana ate 29/02/2028; 1 visita por semana ate 15/05/2028 (34 visitas + etiquetagem = 35 medicoes).
+Calendario B (adotado no cronograma final): visitas semanais a partir do fim da etiquetagem (10/12/2027) ate 31/01/2028;
+2 visitas por semana de 01/02 a 15/05/2028 (38 visitas + etiquetagem = 39 medicoes).
+Os cenarios de incidencia usam o calendario A, o caso mais conservador.
 
 Fontes dos parametros:
 - Progresso da doenca: inicio em dezembro e pico entre maio e julho em lavoura sem controle
@@ -113,7 +116,7 @@ ax.axvspan(D0 + dt.timedelta(days=FIM), datas[-1], color="0.9", zorder=0)
 ax.text(D0 + dt.timedelta(days=FIM + 4), 70, "fora da\ncampanha", fontsize=7, color="0.35")
 ax.xaxis.set_major_formatter(mdates.DateFormatter("%b/%y"))
 ax.set_ylabel("Folhas etiquetadas com lesão (%)"); ax.legend(frameon=False, fontsize=7, loc="upper left")
-ax.set_title("Cenários de progresso da ferrugem e as 34 visitas da campanha (linhas verticais)", fontsize=9)
+ax.set_title(f"Cenários de progresso da ferrugem e as {VIS.size - 1} visitas do calendário original (linhas verticais)", fontsize=9)
 ax2 = ax.twinx(); meses = list(range(12, 13)) + list(range(1, 8))
 xm = [dt.date(2027 if m == 12 else 2028, m, 15) for m in meses]
 ax2.plot(xm, [ip_ortolani(m) for m in meses], "k--", lw=0.9, label="incubação, Ortolani")
@@ -157,7 +160,7 @@ print("ok", res["referencia_20pct"], res["incubacao"])
 # Visitas semanais em dezembro e janeiro (linha de base), duas por semana de 01/02 a 15/05/2028.
 def calendario_b():
     v = [dia(dt.date(2027, 12, 1))]
-    d = dt.date(2027, 12, 6)
+    d = dt.date(2027, 12, 11)              # depois do fim da etiquetagem (01 a 10/12)
     while d <= dt.date(2028, 5, 15):
         if d < dt.date(2028, 2, 1):
             if d.weekday() == 0: v.append(dia(d))
@@ -181,14 +184,14 @@ for nome, V in (("A_atual", VIS_A), ("B_ajustado", VIS_B)):
 res["comparacao_calendarios"] = comp
 
 fig, ax = plt.subplots(figsize=(6.0, 3.0))
-for (nome, V), cor, dx in ((("Calendário atual (34 visitas)", VIS_A), "#7570b3", -0.2), (("Calendário ajustado à epidemia", VIS_B), "#1b7837", 0.2)):
+for (nome, V), cor, dx in ((("Calendário original", VIS_A), "#7570b3", -0.2), (("Calendário adotado", VIS_B), "#1b7837", 0.2)):
     VIS = V; allp = []
     for _ in range(100):
         pos, _ = roda(0.20, 0.01, "ortolani"); allp += [p["n_pre"] for p in pos]
     h = np.bincount(allp, minlength=16)[:16] / len(allp)
-    ax.bar(np.arange(16) + dx, h, width=0.4, color=cor, label=f"{nome.split(' (')[0]} ({V.size} visitas)")
+    ax.bar(np.arange(16) + dx, h, width=0.4, color=cor, label=f"{nome} ({V.size - 1} visitas + etiquetagem)")
 ax.set_xlabel("Medições antes do sintoma, por folha positiva"); ax.set_ylabel("Fração das folhas positivas")
-ax.legend(frameon=False, fontsize=7.5); ax.set_title("Efeito do calendário de visitas (incidência 20%, incubação de Ortolani)", fontsize=9)
+ax.set_ylim(0, 0.62); ax.legend(frameon=False, fontsize=7.5, loc="upper right"); ax.set_title("Efeito do calendário de visitas (incidência 20%, incubação de Ortolani)", fontsize=9)
 fig.tight_layout(); fig.savefig(os.path.join(FIG, "fig8_calendarios.pdf")); plt.close(fig)
 json.dump(res, open(os.path.join(HERE, "..", "resultados_coorte.json"), "w"), indent=1)
 print("ok2")
