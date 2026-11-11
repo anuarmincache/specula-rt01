@@ -1,0 +1,7 @@
+parametro,valor_base,cv_entre_folhas,cv_no_tempo,origem
+N,1.5,0.05,0.005,"Soares et al. 2022 (N=1,5)"
+cab,45.0,0.15,0.02,hipótese
+car,10.0,0.15,0.02,hipótese
+cbrown,0.0,,,"Soares et al. 2022 (zero, folha verde)"
+cw,0.015,0.1,0.02,hipótese
+cm,0.009,0.1,0.01,hipótese

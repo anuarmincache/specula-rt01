@@ -1,0 +1,19 @@
+sensor,efeito_pct,auc_media,auc_dp
+"Espectrômetro (400 a 1000 nm, 5 nm)",0.0,0.457,0.015
+"Espectrômetro (400 a 1000 nm, 5 nm)",2.5,0.636,0.01
+"Espectrômetro (400 a 1000 nm, 5 nm)",5.0,0.837,0.025
+"Espectrômetro (400 a 1000 nm, 5 nm)",10.0,0.967,0.005
+"Espectrômetro (400 a 1000 nm, 5 nm)",15.0,0.994,0.005
+"Espectrômetro (400 a 1000 nm, 5 nm)",20.0,1.0,0.0
+AS7265x (18 bandas),0.0,0.496,0.05
+AS7265x (18 bandas),2.5,0.701,0.012
+AS7265x (18 bandas),5.0,0.872,0.019
+AS7265x (18 bandas),10.0,0.987,0.005
+AS7265x (18 bandas),15.0,1.0,0.0
+AS7265x (18 bandas),20.0,1.0,0.0
+Câmera RGN (3 bandas largas),0.0,0.516,0.037
+Câmera RGN (3 bandas largas),2.5,0.586,0.021
+Câmera RGN (3 bandas largas),5.0,0.691,0.024
+Câmera RGN (3 bandas largas),10.0,0.844,0.022
+Câmera RGN (3 bandas largas),15.0,0.922,0.015
+Câmera RGN (3 bandas largas),20.0,0.973,0.004
