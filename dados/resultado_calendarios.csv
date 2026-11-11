@@ -1,5 +1,5 @@
 calendario,incubacao,visitas,medicoes,positivos_med,pre_mediana,pre_p10,pre_p90,frac_pre_ge6
 A_atual,ortolani,35,52500,232.0,4.0,4.0,8.0,0.302121989311249
 A_atual,moraes,35,52500,234.0,6.0,5.0,10.0,0.6827002890917938
-B_ajustado,ortolani,40,60000,234.0,8.0,6.0,9.0,0.9306549570870519
-B_ajustado,moraes,40,60000,233.0,10.0,8.0,12.0,0.9683031254459826
+B_ajustado,ortolani,39,58500,234.0,8.0,6.0,9.0,0.9306549570870519
+B_ajustado,moraes,39,58500,233.0,10.0,8.0,12.0,0.9640502354788069
